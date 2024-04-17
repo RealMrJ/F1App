@@ -10,23 +10,23 @@
                         ItemsSource="{Binding Drivers}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid RowDefinitions="3*, 2*">
+                    <Grid RowDefinitions="3*, 2*" Margin="5" Padding="5">
                         <Label Grid.Row="0"
                                    Text="{Binding givenName, StringFormat='Name: {0}'}"
                                    HorizontalTextAlignment="Start"
-                                   FontSize="Medium" />
+                                   FontSize="Small" />
                         <Label Grid.Row="0"
                                    Text="{Binding familyName, StringFormat='Surname: {0}'}"
                                    HorizontalTextAlignment="End"
-                                   FontSize="Medium" />
+                                   FontSize="Small" />
 
                         <Label Grid.Row="1"
                                    Text="{Binding dateOfBirth, StringFormat='Date of Birth: {0:MM/dd/yyyy}'}" 
-                                   FontSize="Medium"
+                                   FontSize="Small"
                                    HorizontalTextAlignment="Start"/>
                         <Label Grid.Row="1" 
                                    Text="{Binding nationality, StringFormat='Nationality: {0}'}" 
-                                   FontSize="Medium" 
+                                   FontSize="Small" 
                                    HorizontalTextAlignment="End"/>
                     </Grid>
                 </DataTemplate>

@@ -10,19 +10,19 @@
                         ItemsSource="{Binding Races}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Grid RowDefinitions="3*, 2*">
+                    <Grid RowDefinitions="3*, 2*" Margin="5" Padding="5">
                             <Label Grid.Row="0" 
                                    Text="{Binding raceName}" 
-                                   FontSize="Medium" 
+                                   FontSize="Small" 
                                    HorizontalOptions="Center" />
 
                             <Label Grid.Row="1"
                                    Text="{Binding Circuit.circuitName}" 
-                                   FontSize="Medium" 
+                                   FontSize="Small" 
                                    HorizontalOptions="Start" />
                             <Label Grid.Row="1"
                                    Text="{Binding Circuit.locality}" 
-                                   FontSize="Medium" 
+                                   FontSize="Small" 
                                    HorizontalOptions="End" />
                     </Grid>
                 </DataTemplate>
