@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Formula1_App.DriversPage">
+
+    <Grid RowDefinitions="100, *">
+
+        <CollectionView Grid.Row="1"
+                        x:Name="collectionDriversView"
+                        ItemsSource="{Binding Drivers}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="3*, 2*">
+                        <Label Grid.Row="0"
+                                   Text="{Binding givenName, StringFormat='Name: {0}'}"
+                                   HorizontalTextAlignment="Start"
+                                   FontSize="Medium" />
+                        <Label Grid.Row="0"
+                                   Text="{Binding familyName, StringFormat='Surname: {0}'}"
+                                   HorizontalTextAlignment="End"
+                                   FontSize="Medium" />
+
+                        <Label Grid.Row="1"
+                                   Text="{Binding dateOfBirth, StringFormat='Date of Birth: {0:MM/dd/yyyy}'}" 
+                                   FontSize="Medium"
+                                   HorizontalTextAlignment="Start"/>
+                        <Label Grid.Row="1" 
+                                   Text="{Binding nationality, StringFormat='Nationality: {0}'}" 
+                                   FontSize="Medium" 
+                                   HorizontalTextAlignment="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

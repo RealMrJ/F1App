@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Formula1_App.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Formula1_App"
+    Title="Formula1_App">
+
+    <Shell.FlyoutHeader>
+        <ContentView HeightRequest="200">
+            <Grid BackgroundColor="Red">
+                <Image Aspect="AspectFill"
+                       Source="store,jpg"
+                       Opacity="0.6"/>
+                <Label Text="Formula 1"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+            </Grid>
+        </ContentView>
+    </Shell.FlyoutHeader>
+
+    <ShellContent Title="Drivers"
+                  ContentTemplate="{DataTemplate local:DriversPage}" />
+
+    <ShellContent Title="Races"
+                  ContentTemplate="{DataTemplate local:RacesPage}" />
+
+    <Shell.FlyoutFooter>
+        <ContentView HeightRequest="100">
+            <Grid BackgroundColor="Green">
+                <Image Aspect="AspectFill"
+                       Source="store.jpg"
+                       Opacity="0.6"/>
+                <Label Text="Made by Alfredo"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+            </Grid>
+        </ContentView>
+    </Shell.FlyoutFooter>
+
+
+</Shell>

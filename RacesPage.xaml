@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Formula1_App.RacesPage">
+
+    <Grid RowDefinitions="100, *">
+
+        <CollectionView Grid.Row="1"
+                        x:Name="collectionRacesView"
+                        ItemsSource="{Binding Races}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="3*, 2*">
+                            <Label Grid.Row="0" 
+                                   Text="{Binding raceName}" 
+                                   FontSize="Medium" 
+                                   HorizontalOptions="Center" />
+
+                            <Label Grid.Row="1"
+                                   Text="{Binding Circuit.circuitName}" 
+                                   FontSize="Medium" 
+                                   HorizontalOptions="Start" />
+                            <Label Grid.Row="1"
+                                   Text="{Binding Circuit.locality}" 
+                                   FontSize="Medium" 
+                                   HorizontalOptions="End" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
